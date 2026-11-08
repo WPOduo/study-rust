@@ -1,22 +1,21 @@
 fn main() {
-    let c1 = 'A';
-    let c2 = '中';
-    let c3 = '😃';
-    println!("{}", '😃'.len_utf8());
-    let s1: &str = "hello";
-    let mut s2 = String::from("hello");
-    s2.push_str(",world");
-    s2.push('!');
-    let s3: String = s1.to_string();
-    let s4: &str = &s2;
-    let s5 = String::from("a") + &s2;
-    let s6 = format!("{}-{}", s1, s2);
-    for ch in "hi中".chars() { }
-    for b in "hi".bytes() { }
-    println!("{}", "中".len());
-    println!("{}", "中".chars().count());
+    let n1 = "\n";
+let tb = "\t";
+let cr = "\r";
+let bs = "\\";
+let q = "\"";
+let sq = '\'';
+let z = "\0";
+let u1 = "\u{4E2D}";
+let e1 = "\u{1F600}";
+let raw = r"C: \users\name";
+let raw2 = r#"He said "hi""#;
+let raw3 = r##"a "#" b"##;
+let b: &[u8; 2] = b"hi";
+let braw = br"raw\nbytes";
+let long = "abc\
+            def";
 }
-
 
 
 
