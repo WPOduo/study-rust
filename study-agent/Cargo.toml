@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = [
+    "lab1-hello-agent",
+    "lab2-tools",
+    "lab3-typed-stream",
+    "lab4-rag",
+    "final-a-code-review",
+    "final-b-kb-qa",
+]
+
+# 共享依赖版本，各 lab 引用（保证全班 API 一致）
+[workspace.dependencies]
+rig = "0.46.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+schemars = "1"
+futures = "0.3"

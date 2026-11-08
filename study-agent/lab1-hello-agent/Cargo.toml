@@ -1,0 +1,9 @@
+[package]
+name = "lab1-hello-agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rig.workspace = true
+tokio.workspace = true
+anyhow.workspace = true

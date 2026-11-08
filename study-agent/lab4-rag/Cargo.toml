@@ -1,0 +1,9 @@
+[package]
+name = "lab4-rag"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rig.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
