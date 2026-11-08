@@ -1,26 +1,28 @@
 fn main() {
-    let n = 5;
-    if n > 0{
-        println!("positive");
-    } else if n < 0{
-        println!("negative");
-    } else {
-        println!("zero");
+    let mut i = 0;
+    let r = loop {
+        i += 1;
+        if i == 3 { break i * 2; } 
+    };
+    while i < 5 {
+        i += 1;
     }
-    let label = if n % 2 == 0 { "even" } else { "odd" };
-    if n > 0 { }
-    match n {
-        0 => println!("zero"),
-        1 | 2 => println!("one or two"),
-        3..=9 => println!("3 to 9"),
-        _ => println!("other"),
+    for x in 0..5 { println!("{}", x); }
+    for x in [1, 2, 3] { }
+    for x in &[1, 2, 3] { }
+    for (idx, val) in [10, 20].iter().enumerate() { }
+    for i in (0..10).rev() { }
+    for x in 0..10 {
+        if x == 1 { continue; }
+        if x == 5 { break; }
     }
-    let s = match n { 0 => "zero", _ => "nonzero" };
-    match n {
-        x if x < 0 => println!("neg"),
-        _ => println!("non-neg"),
+    'outer: for x in 0..3 {
+        for y in 0..3 {
+            if x + y == 3 { break 'outer; }
+        }
     }
-    let opt: Option<i32> = Some(3);
-    if let Some (v) = opt { println!("{}", v); }
-    let Some(v) = opt else { return; };
+    let mut st = Some(1);
+    while let Some(v) = st { st = None; }
+
+    
 }
