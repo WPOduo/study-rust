@@ -1,28 +1,25 @@
 fn main() {
-    let mut i = 0;
-    let r = loop {
-        i += 1;
-        if i == 3 { break i * 2; } 
-    };
-    while i < 5 {
-        i += 1;
-    }
-    for x in 0..5 { println!("{}", x); }
-    for x in [1, 2, 3] { }
-    for x in &[1, 2, 3] { }
-    for (idx, val) in [10, 20].iter().enumerate() { }
-    for i in (0..10).rev() { }
-    for x in 0..10 {
-        if x == 1 { continue; }
-        if x == 5 { break; }
-    }
-    'outer: for x in 0..3 {
-        for y in 0..3 {
-            if x + y == 3 { break 'outer; }
-        }
-    }
-    let mut st = Some(1);
-    while let Some(v) = st { st = None; }
-
-    
+    let a: i8 = -1;
+    let b: u8 = 1;
+    let c = 1_000_000;
+    let d = 0xff;
+    let e: u8 = b'A';
+    let f: f32 = 1.0;
+    let g = 2.0;
+    let h = true;
+    let i = 'A';
+    let t: (i32, f64, char) = (1, 2.0, 'x');
+    let (x, y, z) = t;
+    println!("{}", t.0);
+    let unit = ();
+    let arr:[i32; 3] = [1, 2, 3];
+    let zeros = [0; 5];
+    println!("{}", arr[0]);
+    let s1 = &arr[0..2];
+    let mut v: Vec<i32> = Vec::new();
+    v.push(1);
+    let v2 = vec![1, 2, 3];
+    let s1 = String::from("hello");
+    let s2: &str = "hello";
+    let n: Option<i32> = None;
 }
